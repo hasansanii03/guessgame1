@@ -11,9 +11,14 @@ let roundnum=document.getElementById('roundnum')
 
 let result=0
 const addnum=()=>{
-    result+=1
+    if(result<=8){
+        result+=1
     
     number.innerText=result
+}
+    else{
+        add.disabled=true
+    }
 }
 const minnum=()=>{
     if(result>0){
@@ -32,8 +37,10 @@ target.innerHTML=randomnum
 let computer=Math.floor(Math.random()*9)
 computerG.innerHTML=computer
 console.log()
-let c=randomnum-result;
-let b=randomnum-computer
+let c=Math.abs(randomnum-result)
+let b=Math.abs(randomnum-computer)
+console.log(c)
+console.log(b)
 if(b <= c   ){
  console.log('computer win') 
  guess.disabled=true  
@@ -56,6 +63,7 @@ else{
 }
 let rand=0
 const next=()=>{
+    add.disabled=false
     let randomnum=Math.floor(Math.random()*9)
     let computer=Math.floor(Math.random()*9)
     rand+=1
@@ -72,7 +80,7 @@ let b=randomnum-computer
         guess.style.backgroundColor='blue'
         guess.style.color='white'
         guess.innerHTML='Make a Guess'
-        let win=document.getElementById('win').innerHTML=''
+        let win=document.getElementById('win').innerHTML=' '
         }else{
         guess.disabled=false
         guess.style.backgroundColor='blue'
