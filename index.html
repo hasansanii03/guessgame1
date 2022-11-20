@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Number Guesser!</h1>
+    </div>
+    <div class="container1">
+        <h2>Round <span id="roundnum">0</span></h2>
+        <h3>Target Number: <span id="target">?</span></h3>
+    </div>
+    <div class="cards">
+        <div class="card1">
+            <p>Computer </p>
+            <h5>Score: <span id="score">0</span></h5>
+            
+            <p id="computer-guess">?</p>
+            <p id="win" > </p>
+
+        </div>
+        <div class="card2">
+            <p>You</p>
+            <h5>Score: <span id="score1">0</span></h5>
+            <div class="screen" id="number">0</div>
+            <div class="plus-minus">
+                <button id="min">-</button>
+                <button id="add">+</button>
+                
+            </div>
+            <button class="Guess" id="guess" > Make a Guess</button>
+
+        </div>
+    </div>
+    <div class="container">
+        <button class="round" id="round">Next round</button>
+    </div>
+    <div class="footer">
+        <div class="a">
+            <p>Step 1 </p>
+            <p>input a number, <br>
+            beetween 0 and 9</p>
+        </div>
+        <div class="b">
+            <p>Step 2 </p>
+            <p>Click "Make a Guess" to, <br> submit your guess and see,<br> who won the round.</p>
+        </div>
+        <div class="c">
+            <p>Step 3 </p>
+            <p>Click "Next Round", <br> to play again.</p>
+        </div>
+
+    </div>
+
+    
+    <script src="https://kit.fontawesome.com/2185bad684.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
